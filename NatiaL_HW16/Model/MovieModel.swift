@@ -31,7 +31,7 @@ let titlesAndActorsDictionary = ["Doctor Strange" : "Benedict Cumberbatch" ,
                          "Spider-Man": "Tom Holland" ,
                          "Iron Man" : "Robert Downey Jr.",
                          "Captain America: The Winter Soldier" : "Chris Evans",
-                                 "Thor: Love and Thunder" : "Chris Hemsworth and Natalie Portman",
+                         "Thor: Love and Thunder" : "Chris Hemsworth and Natalie Portman",
                          "Black Widow" : "Scarlett  Johansson " ,
                          "Capitan Marvel" : "Brie Larson ",
                         "Black Panther": "Chadwick Boseman" ]

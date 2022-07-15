@@ -20,24 +20,33 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qE8-tK-zp4">
                         <rect key="frame" x="0.0" y="0.0" width="192" height="90"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaQ-lF-o6C">
-                                <rect key="frame" x="46" y="20" width="100" height="50"/>
-                                <color key="backgroundColor" red="0.82745099070000006" green="0.89411771299999998" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipt-0y-yA9">
+                                <rect key="frame" x="61" y="22.5" width="70" height="45"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="BIE-nO-9zS"/>
-                                    <constraint firstAttribute="width" constant="100" id="WHx-Hk-FW8"/>
+                                    <constraint firstAttribute="width" constant="70" id="g1y-5m-cL3"/>
+                                    <constraint firstAttribute="height" constant="45" id="ghG-S9-gaK"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="filterMoviesByGenreBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="i9O-Kd-JnU"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.80000000000000004" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vaQ-lF-o6C" firstAttribute="centerX" secondItem="qE8-tK-zp4" secondAttribute="centerX" id="MeH-TJ-1od"/>
-                            <constraint firstItem="vaQ-lF-o6C" firstAttribute="centerY" secondItem="qE8-tK-zp4" secondAttribute="centerY" id="gAO-Mc-tSh"/>
+                            <constraint firstItem="ipt-0y-yA9" firstAttribute="centerX" secondItem="qE8-tK-zp4" secondAttribute="centerX" id="BMI-WK-uwU"/>
+                            <constraint firstItem="ipt-0y-yA9" firstAttribute="centerY" secondItem="qE8-tK-zp4" secondAttribute="centerY" id="QtR-dS-mij"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -51,7 +60,7 @@
             </constraints>
             <size key="customSize" width="192" height="90"/>
             <connections>
-                <outlet property="genreBtn" destination="vaQ-lF-o6C" id="snz-QZ-IDD"/>
+                <outlet property="genreFilterLb" destination="ipt-0y-yA9" id="vLW-EJ-BX2"/>
             </connections>
             <point key="canvasLocation" x="240.57971014492756" y="111.83035714285714"/>
         </collectionViewCell>

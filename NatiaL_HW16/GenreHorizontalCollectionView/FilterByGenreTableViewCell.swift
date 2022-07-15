@@ -6,11 +6,17 @@
 //
 
 import UIKit
-
+protocol SendDataDelegate {
+    func sendData(about: Int)
+}
 
 class FilterByGenreTableViewCell: UITableViewCell {
-
+    
+    var sendDataDelegate: SendDataDelegate!
+    
     @IBOutlet weak var collectionView: UICollectionView!
+   
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +26,7 @@ class FilterByGenreTableViewCell: UITableViewCell {
         
     }
 
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -38,16 +45,16 @@ extension FilterByGenreTableViewCell: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.deque(FilterByGenreCollectionViewCell.self, for: indexPath)
         cell.configureBtnName(by: FilterModel.filterMenu[indexPath.row])
-
+//        cell.filterDelegate = self
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("sadsd")
         
-       // filterDelegate?.filterArray(by: FilterModel.filterMenu[indexPath.row])
-      
-     
+        sendDataDelegate?.sendData(about: indexPath.row)
+        
+     print("selectt")
     }
     
     
