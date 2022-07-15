@@ -34,23 +34,6 @@ class MovieDetailsViewController: UIViewController {
         detailsCollectionView.registerNib(class: DetailsCollectionViewCell.self)
     }
     
-    @IBAction func makeAsFav(_ sender: UIButton) {
-        
-        guard let title = self.movieTitle.text else { return }
-        
-        if sender.titleLabel?.text == "Add To Favorite List" {
-            sender.setTitle("Remove from Favorite List", for: UIControl.State.normal)
-            favoriteMoveis.insert(title)
-            
-            print(favoriteMoveis.count)
-        } else {
-            sender.setTitle("Add To Favorite List", for: UIControl.State.normal)
-            favoriteMoveis.remove(title)
-            print(favoriteMoveis.count)
-        }
-        //            delegate?.passFavoriteMovieTitle(from: Array(favoriteMoveis))
-    }
-    
     func setUpView(){
         guard let movieDetails = detailsModel else { return }
         coverPoster.image = movieDetails.image

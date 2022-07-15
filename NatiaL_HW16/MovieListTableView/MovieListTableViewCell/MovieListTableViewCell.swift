@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+// protocol/Delegate to pass data from MovieList to DetailsPage
 protocol MovieListDelegate {
     func changeSection(for cell: MovieListTableViewCell)
 }
@@ -33,6 +35,7 @@ class MovieListTableViewCell: UITableViewCell {
     }
     
     @IBAction func watchedOrNotBtn(_ sender: UIButton) {
+        
         movieDelegate?.changeSection(for: self)
     }
     func configureMovie(with item: Movie){

@@ -21,37 +21,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="192" height="90"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipt-0y-yA9">
-                                <rect key="frame" x="61" y="22.5" width="70" height="45"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="g1y-5m-cL3"/>
-                                    <constraint firstAttribute="height" constant="45" id="ghG-S9-gaK"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="0.0" width="192" height="90"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" red="0.80000000000000004" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
+                                        <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ipt-0y-yA9" firstAttribute="leading" secondItem="qE8-tK-zp4" secondAttribute="leading" id="6B6-0j-80m"/>
                             <constraint firstItem="ipt-0y-yA9" firstAttribute="centerX" secondItem="qE8-tK-zp4" secondAttribute="centerX" id="BMI-WK-uwU"/>
+                            <constraint firstAttribute="trailing" secondItem="ipt-0y-yA9" secondAttribute="trailing" id="DPO-d4-Yms"/>
+                            <constraint firstItem="ipt-0y-yA9" firstAttribute="top" secondItem="qE8-tK-zp4" secondAttribute="top" id="Gvf-Vy-Zsd"/>
+                            <constraint firstAttribute="bottom" secondItem="ipt-0y-yA9" secondAttribute="bottom" id="Ohb-8r-ogj"/>
                             <constraint firstItem="ipt-0y-yA9" firstAttribute="centerY" secondItem="qE8-tK-zp4" secondAttribute="centerY" id="QtR-dS-mij"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
                 <constraint firstItem="qE8-tK-zp4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="SeN-Vw-KFV"/>
                 <constraint firstItem="qE8-tK-zp4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="VdP-Z1-F5e"/>
@@ -68,6 +80,12 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

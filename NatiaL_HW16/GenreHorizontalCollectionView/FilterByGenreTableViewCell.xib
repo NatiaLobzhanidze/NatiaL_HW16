@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +18,7 @@
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="FilterByGenreTableViewCell" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="t0B-A9-yar">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="120"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.86274516580000005" green="0.67058825489999996" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ax-8x-cPv">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -28,6 +27,7 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <color key="backgroundColor" red="0.29411764709999999" green="0.36862745099999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="t0B-A9-yar" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FCL-k3-O62"/>
                     <constraint firstItem="t0B-A9-yar" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XVw-91-wa6"/>
@@ -36,15 +36,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" red="0.82745099070000006" green="0.89411771299999998" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <connections>
                 <outlet property="collectionView" destination="t0B-A9-yar" id="KDR-zh-7Ow"/>
             </connections>
             <point key="canvasLocation" x="147.10144927536234" y="113.16964285714285"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
