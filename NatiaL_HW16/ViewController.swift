@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     static var movieList = [Movie]()
     var watchedArray = [Movie]()
     var unwatchedArray = [Movie]()
+    var filteredArray = [Movie]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     }
     
     func makeMovieList() {
+    
         let genre = Movie.Genre.allCases
         for i in 0..<titlesAndActorsDictionary.count {
             guard let movieGenre = genre.randomElement(), let genre = Movie.Genre(rawValue: movieGenre.rawValue) else { return }
@@ -57,7 +59,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilterByGenreTableViewCell", for: indexPath)
-        
+            
         return cell
         case 1:
             let cell = tableView.deque(class: MovieListTableViewCell.self, for: indexPath)
@@ -87,6 +89,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let vc  = sb.instantiateViewController(withIdentifier: "MovieDetailsViewController") as? MovieDetailsViewController
         guard let  vc = vc else { return }
         if indexPath.section == 0 {
+           
          
         } else if  indexPath.section == 1 {
             let elem = watchedArray[indexPath.row]
@@ -124,3 +127,34 @@ extension ViewController: MovieListDelegate {
         tableView.reloadData()
     }
 }
+
+extension ViewController: FilterTableView {
+    func filterArray(by target : String) {
+        switch target {
+        case  "All":
+                 //All
+                 watchedArray = ViewController.movieList.filter({$0.seen == true })
+                 unwatchedArray = ViewController.movieList.filter({$0.seen == false })
+        case Movie.Genre.comedy.rawValue :
+                 // Comedy
+                 watchedArray = ViewController.movieList.filter{$0.seen == true }.filter({$0.genre.rawValue == Movie.Genre.comedy.rawValue})
+                 unwatchedArray = ViewController.movieList.filter({$0.seen == false }).filter({$0.genre.rawValue == Movie.Genre.comedy.rawValue})
+                 tableView.reloadData()
+             case Movie.Genre.action.rawValue:
+                 // Action
+                 watchedArray = ViewController.movieList.filter{$0.seen == true }.filter({$0.genre.rawValue == Movie.Genre.action.rawValue})
+                 unwatchedArray = ViewController.movieList.filter({$0.seen == false }).filter({$0.genre.rawValue == Movie.Genre.action.rawValue})
+                 tableView.reloadData()
+             case Movie.Genre.drama.rawValue:
+                 //Drama
+                 watchedArray = ViewController.movieList.filter{$0.seen == true }.filter({$0.genre.rawValue == Movie.Genre.drama.rawValue})
+                 unwatchedArray = ViewController.movieList.filter({$0.seen == false }).filter({$0.genre.rawValue == Movie.Genre.drama.rawValue})
+                 tableView.reloadData()
+             default:
+                 break
+     
+             }
+        }
+    }
+    
+    

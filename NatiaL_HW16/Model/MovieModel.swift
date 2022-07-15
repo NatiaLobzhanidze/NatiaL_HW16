@@ -14,7 +14,7 @@ struct Movie {
         case drama
         case comedy
     }
-    let image : UIImage!
+    var image : UIImage!
     let title: String
     let releaseDate: String
     let imdb: Double

@@ -92,11 +92,11 @@
 		60CF33F12880BB7000E429E4 /* NatiaL_HW16 */ = {
 			isa = PBXGroup;
 			children = (
-				60CF34252880D81A00E429E4 /* MovieDetailsPage */,
 				60CF33F22880BB7000E429E4 /* AppDelegate.swift */,
 				60CF33F42880BB7000E429E4 /* SceneDelegate.swift */,
 				60CF34172880BE8000E429E4 /* Extensions */,
 				60CF34202880C44100E429E4 /* Model */,
+				60CF34252880D81A00E429E4 /* MovieDetailsPage */,
 				60CF340B2880BD7F00E429E4 /* GenreHorizontalCollectionView */,
 				60CF34062880BBC000E429E4 /* MovieListTableViewCell */,
 				60CF33F62880BB7000E429E4 /* ViewController.swift */,

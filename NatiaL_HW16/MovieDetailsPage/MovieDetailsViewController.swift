@@ -24,7 +24,7 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var detailsCollectionView: UICollectionView!
     
     var detailsModel: Movie?
-    
+    var newArr = [Movie]()
     override func viewDidLoad() {
             super.viewDidLoad()
             setUpView()
@@ -65,6 +65,7 @@ class MovieDetailsViewController: UIViewController {
     }
 
 extension MovieDetailsViewController: UICollectionViewDelegate , UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         guard let genre = detailsModel?.genre else { return 0}
@@ -75,10 +76,18 @@ extension MovieDetailsViewController: UICollectionViewDelegate , UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.deque(DetailsCollectionViewCell.self, for: indexPath)
         guard let genre = detailsModel?.genre else { return UICollectionViewCell() }
-        let newArr = ViewController.movieList.filter{$0.genre == genre}
+        newArr = ViewController.movieList.filter{$0.genre == genre}.filter({$0.title != detailsModel?.title}
+        )
         cell.configureDetails(from: newArr[indexPath.row])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        detailsModel = newArr[indexPath.row]
+        setUpView()
+       
     }
     
     
