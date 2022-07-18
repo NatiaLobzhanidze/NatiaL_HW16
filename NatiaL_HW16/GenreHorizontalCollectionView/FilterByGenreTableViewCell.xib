@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="FilterByGenreTableViewCell" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="t0B-A9-yar">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="FilterByGenreTableViewCell" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="t0B-A9-yar">
                         <rect key="frame" x="0.0" y="0.0" width="333" height="120"/>
                         <color key="backgroundColor" red="0.86274516580000005" green="0.67058825489999996" blue="0.231372565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ax-8x-cPv">

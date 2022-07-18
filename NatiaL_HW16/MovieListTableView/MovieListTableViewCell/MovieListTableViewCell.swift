@@ -15,7 +15,7 @@ protocol MovieListDelegate {
 
 
 class MovieListTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieStatus: UIButton!
@@ -28,10 +28,10 @@ class MovieListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
     @IBAction func watchedOrNotBtn(_ sender: UIButton) {

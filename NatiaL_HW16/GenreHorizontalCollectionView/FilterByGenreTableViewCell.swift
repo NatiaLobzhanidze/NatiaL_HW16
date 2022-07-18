@@ -18,7 +18,7 @@ class FilterByGenreTableViewCell: UITableViewCell {
     var sendDataDelegate: SendDataDelegate!
     
     @IBOutlet weak var collectionView: UICollectionView!
-   
+    
     
     
     override func awakeFromNib() {
@@ -63,5 +63,5 @@ extension FilterByGenreTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
     }
- 
+    
 }
